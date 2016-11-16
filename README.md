@@ -27,7 +27,7 @@ const mongoose = require('mongoose');
 const config = {mongoUri: 'mongodb+srv://_mongo._tcp.example.com'};
 
 srvPromise
-  .proxy(config.mongoUri)
+  .proxyUri(config.mongoUri)
   .then(uri => {
     console.log('uri resolved as: ' + uri);
     mongoose.connect(uri);    
